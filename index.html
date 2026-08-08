@@ -4,26 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Muna Creaciones | Papelería creativa</title>
+  <title>Muna Creaciones | Papelería Creativa</title>
 
-  <meta
-    name="description"
-    content="Muna Creaciones — Papelería creativa, stickers, fotolibros y productos personalizados."
-  >
+  <meta name="description" content="Muna Creaciones - Papelería creativa, personalizados, stickers y fotolibros.">
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
-
-    :root {
-      --crema: #FCFAF7;
-      --lila: #B99BE8;
-      --lila-claro: #EDE5F8;
-      --rosa: #F4DDE8;
-      --verde: #DCE3D5;
-      --texto: #332D3A;
-      --blanco: #FFFFFF;
-    }
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -35,660 +20,436 @@
     }
 
     body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--crema);
-      color: var(--texto);
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fffaff;
+      color: #3d3345;
       line-height: 1.6;
     }
 
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
 
-    button {
-      font-family: inherit;
-    }
-
-    /* =========================
-       HEADER
-    ========================= */
+    /* ---------- NAVEGACIÓN ---------- */
 
     header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(252, 250, 247, 0.95);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid #eee8f2;
+      background: rgba(255, 250, 255, 0.96);
+      border-bottom: 1px solid #eee3f4;
     }
 
     .nav {
-      max-width: 1200px;
+      max-width: 1150px;
       margin: auto;
-      padding: 18px 30px;
+      padding: 18px 25px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
+      gap: 25px;
     }
 
     .logo {
-      display: flex;
-      flex-direction: column;
-      line-height: 0.9;
-      font-weight: 700;
+      font-size: 27px;
+      font-weight: 800;
       letter-spacing: 2px;
+      color: #a875d5;
     }
 
-    .logo-main {
-      font-size: 25px;
-      color: var(--lila);
+    .logo span {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: #8d8293;
+      margin-top: -5px;
+      text-align: center;
     }
 
-    .logo-sub {
-      font-size: 9px;
-      letter-spacing: 4px;
-      margin-top: 6px;
-      color: var(--texto);
-    }
-
-    .menu {
+    nav {
       display: flex;
-      gap: 28px;
+      gap: 25px;
       font-size: 14px;
-      font-weight: 500;
     }
 
-    .menu a {
-      transition: color 0.2s ease;
+    nav a {
+      transition: 0.2s;
     }
 
-    .menu a:hover {
-      color: var(--lila);
+    nav a:hover {
+      color: #a875d5;
     }
 
-    .nav-icons {
-      display: flex;
-      gap: 12px;
+    .cart {
+      font-size: 20px;
     }
 
-    .icon-button {
-      border: 1px solid #e7deee;
-      background: white;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 17px;
-      transition: 0.2s ease;
-    }
-
-    .icon-button:hover {
-      background: var(--lila-claro);
-      transform: translateY(-2px);
-    }
-
-    /* =========================
-       HERO
-    ========================= */
+    /* ---------- HERO ---------- */
 
     .hero {
-      max-width: 1200px;
+      max-width: 1150px;
       margin: auto;
-      padding: 70px 30px 80px;
+      min-height: 650px;
+      padding: 80px 25px;
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
+      grid-template-columns: 1fr 1fr;
       align-items: center;
-      gap: 65px;
+      gap: 60px;
     }
 
     .eyebrow {
+      color: #a875d5;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
       text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--lila);
-      margin-bottom: 18px;
     }
 
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(42px, 5vw, 70px);
-      line-height: 1.08;
-      font-weight: 600;
+    .hero h1 {
+      font-size: clamp(45px, 6vw, 76px);
+      line-height: 0.98;
+      color: #302735;
       margin-bottom: 25px;
     }
 
-    .hero-text {
-      max-width: 480px;
-      color: #665f6d;
-      font-size: 17px;
-      margin-bottom: 32px;
+    .hero h1 span {
+      color: #a875d5;
     }
 
-    .primary-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--lila);
-      color: white;
-      border: none;
-      border-radius: 30px;
+    .hero p {
+      max-width: 520px;
+      font-size: 18px;
+      color: #766c7b;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
       padding: 14px 25px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: 0.25s ease;
-      box-shadow: 0 8px 20px rgba(185, 155, 232, 0.25);
+      border-radius: 30px;
+      background: #a875d5;
+      color: white;
+      font-weight: bold;
+      transition: 0.25s;
     }
 
-    .primary-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 25px rgba(185, 155, 232, 0.35);
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(168,117,213,0.25);
     }
 
-    .hero-image {
-      min-height: 470px;
+    .button.secondary {
+      background: white;
+      color: #a875d5;
+      border: 1px solid #d9c2e9;
+    }
+
+    .hero-card {
+      min-height: 430px;
       border-radius: 35px;
-      background:
-        radial-gradient(circle at 25% 25%, #f4ddeb 0 8%, transparent 9%),
-        radial-gradient(circle at 80% 70%, #dce3d5 0 9%, transparent 10%),
-        linear-gradient(135deg, #eee5f8, #faf5f8);
+      background: linear-gradient(145deg, #f2e7fa, #fff);
       display: flex;
       align-items: center;
       justify-content: center;
+      box-shadow: 0 20px 50px rgba(111,77,130,0.12);
       position: relative;
       overflow: hidden;
     }
 
-    .hero-card {
-      width: 70%;
-      background: rgba(255,255,255,0.9);
-      padding: 35px;
-      border-radius: 20px;
+    .hero-card::before {
+      content: "✦";
+      position: absolute;
+      top: 35px;
+      right: 50px;
+      font-size: 45px;
+      color: #c49be2;
+    }
+
+    .hero-card-content {
       text-align: center;
-      transform: rotate(-4deg);
-      box-shadow: 0 25px 50px rgba(51,45,58,0.12);
+      padding: 30px;
     }
 
-    .hero-card .star {
-      color: var(--lila);
-      font-size: 34px;
-      margin-bottom: 10px;
+    .hero-card-content .big {
+      font-size: 90px;
+      margin-bottom: 15px;
     }
 
-    .hero-card h2 {
-      font-family: 'Playfair Display', serif;
+    .hero-card-content h2 {
       font-size: 30px;
-      margin-bottom: 8px;
+      color: #4a3b52;
     }
 
-    .hero-card p {
-      color: #77707d;
-      font-size: 13px;
+    .hero-card-content p {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #8c7c94;
     }
 
-    /* =========================
-       CATEGORÍAS
-    ========================= */
+    /* ---------- SECCIONES ---------- */
 
-    .section {
-      padding: 85px 30px;
+    section {
+      padding: 90px 25px;
     }
 
-    .section-heading {
+    .section-inner {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-title {
       text-align: center;
-      max-width: 650px;
-      margin: 0 auto 45px;
+      margin-bottom: 45px;
     }
 
-    .section-heading h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 42px;
-      margin-bottom: 12px;
+    .section-title small {
+      color: #a875d5;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
-    .section-heading p {
-      color: #746d79;
+    .section-title h2 {
+      font-size: 40px;
+      color: #332a38;
+      margin-top: 8px;
     }
+
+    .section-title p {
+      max-width: 600px;
+      margin: 10px auto;
+      color: #817684;
+    }
+
+    /* ---------- CATEGORÍAS ---------- */
 
     .categories {
-      max-width: 1200px;
-      margin: auto;
+      background: #fdf8ff;
+    }
+
+    .category-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
+      gap: 20px;
     }
 
     .category {
-      min-height: 220px;
-      border-radius: 24px;
-      padding: 25px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      transition: 0.25s ease;
-      cursor: pointer;
+      background: white;
+      padding: 35px 20px;
+      border-radius: 22px;
+      text-align: center;
+      border: 1px solid #eee3f4;
+      transition: 0.25s;
     }
 
     .category:hover {
-      transform: translateY(-6px);
-    }
-
-    .category:nth-child(1) {
-      background: var(--lila-claro);
-    }
-
-    .category:nth-child(2) {
-      background: var(--rosa);
-    }
-
-    .category:nth-child(3) {
-      background: var(--verde);
-    }
-
-    .category:nth-child(4) {
-      background: #eee8df;
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(100,70,120,0.10);
     }
 
     .category-icon {
-      font-size: 42px;
-      margin-bottom: auto;
+      font-size: 40px;
+      margin-bottom: 15px;
     }
 
     .category h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 25px;
+      margin-bottom: 7px;
+      color: #433849;
     }
 
     .category p {
       font-size: 13px;
-      color: #625c67;
+      color: #887b8c;
     }
 
-    /* =========================
-       PRODUCTOS
-    ========================= */
-
-    .products-section {
-      background: white;
-    }
+    /* ---------- PRODUCTOS ---------- */
 
     .products {
-      max-width: 1200px;
-      margin: auto;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
     }
 
     .product {
-      position: relative;
+      background: white;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid #eee3f4;
+      transition: 0.25s;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(100,70,120,0.10);
     }
 
     .product-image {
-      height: 300px;
-      border-radius: 22px;
-      background: var(--lila-claro);
+      height: 250px;
+      background: #f3e9f8;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 65px;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h3 {
+      margin-bottom: 5px;
+    }
+
+    .product-info p {
+      font-size: 14px;
+      color: #817684;
       margin-bottom: 15px;
-      overflow: hidden;
     }
 
-    .product:nth-child(2) .product-image {
-      background: var(--rosa);
+    .product-link {
+      color: #a875d5;
+      font-weight: bold;
+      font-size: 14px;
     }
 
-    .product:nth-child(3) .product-image {
-      background: var(--verde);
+    /* ---------- SOBRE MUNA ---------- */
+
+    .about {
+      background: #f5ebfa;
     }
 
-    .product:nth-child(4) .product-image {
-      background: #eee8df;
-    }
-
-    .heart {
-      position: absolute;
-      right: 15px;
-      top: 15px;
-      width: 38px;
-      height: 38px;
-      border: none;
-      background: white;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 17px;
-    }
-
-    .product-category {
-      color: #8c7a9f;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-weight: 700;
-    }
-
-    .product h3 {
-      margin-top: 4px;
-      font-size: 16px;
-    }
-
-    .price {
-      margin-top: 5px;
-      font-weight: 700;
-    }
-
-    /* =========================
-       PERSONALIZADOS
-    ========================= */
-
-    .custom {
-      max-width: 1200px;
+    .about-box {
+      max-width: 850px;
       margin: auto;
-      border-radius: 35px;
-      background: var(--lila-claro);
-      padding: 65px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 50px;
+      text-align: center;
     }
 
-    .custom h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 43px;
-      line-height: 1.1;
-      margin-bottom: 18px;
-    }
-
-    .custom p {
-      color: #665f6d;
-      margin-bottom: 25px;
-    }
-
-    .custom-art {
-      min-height: 270px;
-      border-radius: 25px;
-      background: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 80px;
-      transform: rotate(3deg);
-      box-shadow: 0 20px 45px rgba(51,45,58,0.08);
-    }
-
-    /* =========================
-       FOTOLIBROS
-    ========================= */
-
-    .photobooks {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .photo-art {
-      min-height: 390px;
-      border-radius: 30px;
-      background: linear-gradient(145deg, #f5dfe9, #eee5f8);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 100px;
-    }
-
-    .photobooks h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 43px;
-      line-height: 1.1;
+    .about-box h2 {
+      font-size: 40px;
       margin-bottom: 20px;
     }
 
-    .photobooks p {
-      color: #6d6672;
-      margin-bottom: 25px;
+    .about-box p {
+      color: #706475;
+      font-size: 17px;
     }
 
-    /* =========================
-       INSTAGRAM
-    ========================= */
+    /* ---------- CONTACTO ---------- */
 
-    .instagram {
-      background: #f7f2fa;
+    .contact {
       text-align: center;
     }
 
-    .instagram-grid {
-      max-width: 1000px;
-      margin: 40px auto 0;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-    }
-
-    .insta-card {
-      aspect-ratio: 1;
-      border-radius: 18px;
-      background: var(--lila-claro);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 38px;
-    }
-
-    .insta-card:nth-child(2) {
-      background: var(--rosa);
-    }
-
-    .insta-card:nth-child(3) {
-      background: var(--verde);
-    }
-
-    .insta-card:nth-child(4) {
-      background: #eee8df;
-    }
-
-    /* =========================
-       NEWSLETTER
-    ========================= */
-
-    .newsletter {
-      text-align: center;
-      max-width: 700px;
+    .contact-box {
+      background: #3e3345;
+      color: white;
+      border-radius: 30px;
+      max-width: 900px;
       margin: auto;
+      padding: 60px 30px;
     }
 
-    .newsletter h2 {
-      font-family: 'Playfair Display', serif;
+    .contact-box h2 {
       font-size: 38px;
       margin-bottom: 12px;
     }
 
-    .newsletter p {
-      color: #716a76;
+    .contact-box p {
+      color: #ddd2e2;
       margin-bottom: 25px;
     }
 
-    .newsletter-form {
-      display: flex;
-      max-width: 520px;
-      margin: auto;
-      gap: 10px;
-    }
-
-    .newsletter-form input {
-      flex: 1;
-      padding: 15px 18px;
-      border-radius: 30px;
-      border: 1px solid #ded6e4;
+    .contact-box .button {
       background: white;
-      font-family: inherit;
-      outline: none;
+      color: #8d59b5;
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
+    /* ---------- FOOTER ---------- */
 
     footer {
-      background: var(--texto);
+      background: #29222e;
+      color: #ddd2e2;
+      padding: 40px 25px;
+      text-align: center;
+    }
+
+    footer .footer-logo {
       color: white;
-      padding: 60px 30px 25px;
-    }
-
-    .footer-grid {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr;
-      gap: 40px;
-    }
-
-    footer .logo-main {
-      color: white;
-    }
-
-    footer .logo-sub {
-      color: #ddd4e5;
+      font-weight: bold;
+      font-size: 22px;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
     }
 
     footer p {
-      color: #c9c0cf;
-      font-size: 13px;
-      margin-top: 15px;
-      max-width: 300px;
-    }
-
-    footer h4 {
-      margin-bottom: 15px;
-    }
-
-    footer li {
-      list-style: none;
-      color: #c9c0cf;
-      margin-bottom: 8px;
       font-size: 13px;
     }
 
-    .copyright {
-      max-width: 1200px;
-      margin: 50px auto 0;
-      padding-top: 20px;
-      border-top: 1px solid #504957;
-      color: #aaa1af;
-      font-size: 12px;
-    }
+    /* ---------- CELULAR ---------- */
 
-    /* =========================
-       CELULAR
-    ========================= */
-
-    @media (max-width: 850px) {
+    @media (max-width: 800px) {
 
       .nav {
         padding: 15px 18px;
       }
 
-      .menu {
+      nav {
         display: none;
       }
 
       .hero {
         grid-template-columns: 1fr;
-        padding: 50px 20px 60px;
-        gap: 35px;
+        padding: 55px 20px;
+        min-height: auto;
+        gap: 40px;
       }
 
-      .hero-image {
-        min-height: 340px;
+      .hero h1 {
+        font-size: 52px;
       }
 
-      .section {
+      .hero-card {
+        min-height: 320px;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      section {
         padding: 65px 20px;
       }
 
-      .section-heading h2 {
-        font-size: 34px;
-      }
-
-      .categories {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .products {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .product-image {
-        height: 220px;
-      }
-
-      .custom {
-        grid-template-columns: 1fr;
-        padding: 40px 25px;
-      }
-
-      .custom h2,
-      .photobooks h2 {
-        font-size: 35px;
-      }
-
-      .photobooks {
-        grid-template-columns: 1fr;
-      }
-
-      .photo-art {
-        min-height: 300px;
-      }
-
-      .instagram-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .newsletter-form {
-        flex-direction: column;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
+      .section-title h2 {
+        font-size: 32px;
       }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 450px) {
 
-      h1 {
-        font-size: 43px;
-      }
-
-      .categories,
-      .products {
+      .category-grid {
         grid-template-columns: 1fr 1fr;
         gap: 12px;
       }
 
       .category {
-        min-height: 180px;
-        padding: 18px;
+        padding: 25px 12px;
       }
 
-      .category h3 {
-        font-size: 20px;
-      }
-
-      .product-image {
-        height: 180px;
-        font-size: 50px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
+      .hero h1 {
+        font-size: 45px;
       }
     }
   </style>
@@ -696,144 +457,139 @@
 
 <body>
 
-  <!-- HEADER -->
+<header>
+  <div class="nav">
 
-  <header>
-    <nav class="nav">
+    <a href="#" class="logo">
+      MUNA
+      <span>CREACIONES</span>
+    </a>
 
-      <a href="#" class="logo">
-        <span class="logo-main">MUNA ✦</span>
-        <span class="logo-sub">CREACIONES</span>
-      </a>
-
-      <div class="menu">
-        <a href="#inicio">Inicio</a>
-        <a href="#tienda">Tienda</a>
-        <a href="#colecciones">Colecciones</a>
-        <a href="#personalizados">Personalizados</a>
-        <a href="#contacto">Contacto</a>
-      </div>
-
-      <div class="nav-icons">
-        <button class="icon-button" aria-label="Favoritos">♡</button>
-        <button class="icon-button" aria-label="Carrito">🛒</button>
-      </div>
-
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#personalizados">Personalizados</a>
+      <a href="#fotolibros">Fotolibros</a>
+      <a href="#contacto">Contacto</a>
     </nav>
-  </header>
+
+    <a href="#catalogo" class="cart">🛍️</a>
+
+  </div>
+</header>
 
 
-  <main id="inicio">
+<main>
 
-    <!-- HERO -->
+  <!-- HERO -->
 
-    <section class="hero">
+  <section class="hero">
 
-      <div>
+    <div>
 
-        <div class="eyebrow">
-          ✦ Hecho para vos ✦
-        </div>
+      <div class="eyebrow">
+        ✦ Hecho especialmente para vos
+      </div>
 
-        <h1>
-          Papelería que convierte momentos en recuerdos.
-        </h1>
+      <h1>
+        Ideas lindas,<br>
+        <span>momentos únicos.</span>
+      </h1>
 
-        <p class="hero-text">
-          Diseños, detalles y productos personalizados creados
-          para acompañar tus momentos más especiales.
-        </p>
+      <p>
+        Papelería creativa y personalizados pensados
+        para regalar, celebrar y guardar esos momentos
+        que merecen ser recordados.
+      </p>
 
-        <a href="#tienda" class="primary-button">
-          Descubrir tienda
+      <div class="buttons">
+        <a href="#catalogo" class="button">
+          Ver catálogo
         </a>
 
+        <a href="#contacto" class="button secondary">
+          Hacer un pedido
+        </a>
       </div>
 
-
-      <div class="hero-image">
-
-        <div class="hero-card">
-
-          <div class="star">✦</div>
-
-          <h2>Muna Creaciones</h2>
-
-          <p>
-            Papelería creativa & personalizados
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
+    </div>
 
 
-    <!-- CATEGORÍAS -->
+    <div class="hero-card">
 
-    <section class="section" id="colecciones">
+      <div class="hero-card-content">
 
-      <div class="section-heading">
+        <div class="big">🎀</div>
 
-        <div class="eyebrow">
-          ✦ Explorá Muna ✦
-        </div>
-
-        <h2>
-          Encontrá algo especial
-        </h2>
+        <h2>Muna Creaciones</h2>
 
         <p>
-          Pequeños detalles creados para hacer
-          especiales tus momentos.
+          Papelería creativa · Stickers · Fotolibros · Diseños
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CATEGORÍAS -->
+
+  <section class="categories">
+
+    <div class="section-inner">
+
+      <div class="section-title">
+
+        <small>Descubrí Muna</small>
+
+        <h2>Creaciones para cada ocasión</h2>
+
+        <p>
+          Elegí tu categoría favorita y encontrá
+          ese detalle especial.
         </p>
 
       </div>
 
 
-      <div class="categories">
+      <div class="category-grid">
 
-        <a href="#tienda" class="category">
+        <a href="#catalogo" class="category">
 
-          <div class="category-icon">
-            📒
-          </div>
+          <div class="category-icon">📒</div>
 
           <h3>Papelería</h3>
 
           <p>
-            Para organizar tus ideas.
+            Cuadernos, libretas y mucho más.
           </p>
 
         </a>
 
 
-        <a href="#tienda" class="category">
+        <a href="#catalogo" class="category">
 
-          <div class="category-icon">
-            🎀
-          </div>
+          <div class="category-icon">✨</div>
 
           <h3>Stickers</h3>
 
           <p>
-            Pequeños detalles que hacen la diferencia.
+            Diseños para personalizar todo.
           </p>
 
         </a>
 
 
-        <a href="#tienda" class="category">
+        <a href="#fotolibros" class="category">
 
-          <div class="category-icon">
-            📸
-          </div>
+          <div class="category-icon">📸</div>
 
           <h3>Fotolibros</h3>
 
           <p>
-            Tus recuerdos, para siempre.
+            Tus recuerdos convertidos en historias.
           </p>
 
         </a>
@@ -841,39 +597,37 @@
 
         <a href="#personalizados" class="category">
 
-          <div class="category-icon">
-            🎁
-          </div>
+          <div class="category-icon">🎀</div>
 
           <h3>Personalizados</h3>
 
           <p>
-            Creado especialmente para vos.
+            Diseños creados especialmente para vos.
           </p>
 
         </a>
 
       </div>
 
-    </section>
+    </div>
+
+  </section>
 
 
-    <!-- PRODUCTOS -->
+  <!-- PRODUCTOS -->
 
-    <section class="section products-section" id="tienda">
+  <section id="catalogo">
 
-      <div class="section-heading">
+    <div class="section-inner">
 
-        <div class="eyebrow">
-          ✦ Favoritos de Muna ✦
-        </div>
+      <div class="section-title">
 
-        <h2>
-          Nuestros productos
-        </h2>
+        <small>Favoritos de Muna</small>
+
+        <h2>Productos destacados</h2>
 
         <p>
-          Algunos de nuestros favoritos.
+          Algunas de nuestras creaciones favoritas.
         </p>
 
       </div>
@@ -883,346 +637,178 @@
 
         <article class="product">
 
-          <button class="heart" aria-label="Agregar a favoritos">
-            ♡
-          </button>
-
           <div class="product-image">
-            📓
+            📒
           </div>
 
-          <div class="product-category">
-            Papelería
-          </div>
+          <div class="product-info">
 
-          <h3>
-            Cuaderno personalizado
-          </h3>
+            <h3>Cuadernos personalizados</h3>
 
-          <div class="price">
-            $00.000
-          </div>
+            <p>
+              Diseñados especialmente para vos.
+            </p>
 
-        </article>
-
-
-        <article class="product">
-
-          <button class="heart" aria-label="Agregar a favoritos">
-            ♡
-          </button>
-
-          <div class="product-image">
-            🎀
-          </div>
-
-          <div class="product-category">
-            Stickers
-          </div>
-
-          <h3>
-            Pack de stickers
-          </h3>
-
-          <div class="price">
-            $00.000
-          </div>
-
-        </article>
-
-
-        <article class="product">
-
-          <button class="heart" aria-label="Agregar a favoritos">
-            ♡
-          </button>
-
-          <div class="product-image">
-            📖
-          </div>
-
-          <div class="product-category">
-            Fotolibros
-          </div>
-
-          <h3>
-            Fotolibro personalizado
-          </h3>
-
-          <div class="price">
-            $00.000
-          </div>
-
-        </article>
-
-
-        <article class="product">
-
-          <button class="heart" aria-label="Agregar a favoritos">
-            ♡
-          </button>
-
-          <div class="product-image">
-            🎁
-          </div>
-
-          <div class="product-category">
-            Regalos
-          </div>
-
-          <h3>
-            Regalo personalizado
-          </h3>
-
-          <div class="price">
-            $00.000
-          </div>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- PERSONALIZADOS -->
-
-    <section class="section" id="personalizados">
-
-      <div class="custom">
-
-        <div>
-
-          <div class="eyebrow">
-            ✦ Hecho especialmente para vos ✦
-          </div>
-
-          <h2>
-            ¿Lo imaginaste?
-            Lo hacemos realidad.
-          </h2>
-
-          <p>
-            Contanos qué tenés en mente y creamos
-            un producto personalizado pensado
-            especialmente para vos.
-          </p>
-
-          <a href="#contacto" class="primary-button">
-            Quiero personalizarlo
-          </a>
-
-        </div>
-
-
-        <div class="custom-art">
-          ✦ 🎀 ✦
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- FOTOLIBROS -->
-
-    <section class="section">
-
-      <div class="photobooks">
-
-        <div class="photo-art">
-          📸
-        </div>
-
-
-        <div>
-
-          <div class="eyebrow">
-            ✦ Fotolibros Muna ✦
-          </div>
-
-          <h2>
-            Tus recuerdos merecen
-            un lugar especial.
-          </h2>
-
-          <p>
-            Convertí tus momentos favoritos en
-            un recuerdo que puedas tocar,
-            guardar y volver a disfrutar.
-          </p>
-
-          <a href="#contacto" class="primary-button">
-            Crear mi fotolibro
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- INSTAGRAM -->
-
-    <section class="section instagram">
-
-      <div class="section-heading">
-
-        <div class="eyebrow">
-          ✦ Muna en Instagram ✦
-        </div>
-
-        <h2>
-          Seguinos en @muna.creaciones_
-        </h2>
-
-        <p>
-          Inspiración, novedades y nuevos productos.
-        </p>
-
-      </div>
-
-
-      <div class="instagram-grid">
-
-        <div class="insta-card">🌸</div>
-        <div class="insta-card">📒</div>
-        <div class="insta-card">🎀</div>
-        <div class="insta-card">✨</div>
-
-      </div>
-
-    </section>
-
-
-    <!-- NEWSLETTER -->
-
-    <section class="section">
-
-      <div class="newsletter">
-
-        <div class="eyebrow">
-          ✦ Sé parte de Muna ✦
-        </div>
-
-        <h2>
-          No te pierdas las novedades
-        </h2>
-
-        <p>
-          Nuevos productos, colecciones y
-          promociones directamente en tu correo.
-        </p>
-
-        <form class="newsletter-form">
-
-          <input
-            type="email"
-            placeholder="Tu correo electrónico"
-            aria-label="Tu correo electrónico"
-          >
-
-          <button class="primary-button" type="submit">
-            Suscribirme
-          </button>
-
-        </form>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- FOOTER -->
-
-  <footer id="contacto">
-
-    <div class="footer-grid">
-
-      <div>
-
-        <div class="logo">
-          <span class="logo-main">MUNA ✦</span>
-          <span class="logo-sub">CREACIONES</span>
-        </div>
-
-        <p>
-          Papelería creativa & personalizados
-          hechos con amor.
-        </p>
-
-      </div>
-
-
-      <div>
-
-        <h4>Tienda</h4>
-
-        <ul>
-          <li><a href="#tienda">Papelería</a></li>
-          <li><a href="#tienda">Stickers</a></li>
-          <li><a href="#tienda">Fotolibros</a></li>
-          <li><a href="#personalizados">Personalizados</a></li>
-        </ul>
-
-      </div>
-
-
-      <div>
-
-        <h4>Ayuda</h4>
-
-        <ul>
-          <li>Preguntas frecuentes</li>
-          <li>Medios de pago</li>
-          <li>Envíos</li>
-          <li>Contacto</li>
-        </ul>
-
-      </div>
-
-
-      <div>
-
-        <h4>Seguinos</h4>
-
-        <ul>
-          <li>
-            <a
-              href="https://www.instagram.com/muna.creaciones_/"
-              target="_blank"
-            >
-              Instagram
+            <a href="#contacto" class="product-link">
+              Consultar →
             </a>
-          </li>
 
-          <li>TikTok</li>
-          <li>WhatsApp</li>
-        </ul>
+          </div>
+
+        </article>
+
+
+        <article class="product">
+
+          <div class="product-image">
+            ✨
+          </div>
+
+          <div class="product-info">
+
+            <h3>Stickers personalizados</h3>
+
+            <p>
+              Diseños únicos para tus proyectos.
+            </p>
+
+            <a href="#contacto" class="product-link">
+              Consultar →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article class="product">
+
+          <div class="product-image">
+            📸
+          </div>
+
+          <div class="product-info">
+
+            <h3>Fotolibros</h3>
+
+            <p>
+              Guardá tus recuerdos de una manera especial.
+            </p>
+
+            <a href="#contacto" class="product-link">
+              Consultar →
+            </a>
+
+          </div>
+
+        </article>
 
       </div>
 
     </div>
 
+  </section>
 
-    <div class="copyright">
-      © 2026 Muna Creaciones · Todos los derechos reservados.
+
+  <!-- PERSONALIZADOS -->
+
+  <section class="about" id="personalizados">
+
+    <div class="about-box">
+
+      <div class="section-title">
+
+        <small>Hecho para vos</small>
+
+        <h2>Tu idea, nuestra creación ✨</h2>
+
+      </div>
+
+      <p>
+        En Muna creemos que los detalles hacen la diferencia.
+        Por eso creamos productos personalizados para que
+        cada regalo, celebración o recuerdo tenga un poquito
+        de vos.
+      </p>
+
     </div>
 
-  </footer>
+  </section>
 
 
-  <script>
+  <!-- FOTOLIBROS -->
 
-    document.querySelector(".newsletter-form").addEventListener("submit", function(event) {
-      event.preventDefault();
-      alert("¡Gracias por querer ser parte de Muna! ✦");
-    });
+  <section id="fotolibros">
 
-  </script>
+    <div class="section-inner">
+
+      <div class="section-title">
+
+        <small>Momentos que quedan</small>
+
+        <h2>Fotolibros 📸</h2>
+
+        <p>
+          Transformamos tus fotos favoritas en un recuerdo
+          que podés volver a disfrutar una y otra vez.
+        </p>
+
+        <br>
+
+        <a href="#contacto" class="button">
+          Quiero mi fotolibro
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACTO -->
+
+  <section class="contact" id="contacto">
+
+    <div class="contact-box">
+
+      <h2>¿Creamos algo juntas? 💜</h2>
+
+      <p>
+        Contanos qué tenés en mente y hacemos realidad
+        tu idea.
+      </p>
+
+      <a
+        href="https://www.instagram.com/muna.creaciones_/"
+        target="_blank"
+        class="button"
+      >
+        Instagram de Muna
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-logo">
+    MUNA CREACIONES
+  </div>
+
+  <p>
+    Papelería creativa & personalizados
+  </p>
+
+  <p>
+    © 2026 Muna Creaciones · Hecho con amor ✦
+  </p>
+
+</footer>
 
 </body>
 </html>
