@@ -6,28 +6,28 @@
 
   <title>Muna Creaciones | Papelería creativa</title>
 
-  <meta name="description" content="Muna Creaciones - Papelería creativa y productos personalizados. Diseños hechos con amor para momentos especiales.">
+  <meta
+    name="description"
+    content="Muna Creaciones — Papelería creativa, stickers, fotolibros y productos personalizados."
+  >
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
 
     :root {
-      --lila: #b58bd9;
-      --lila-oscuro: #79529d;
-      --lila-claro: #eee4f8;
-      --rosa: #f3d9e5;
-      --crema: #fffdfb;
-      --blanco: #ffffff;
-      --texto: #332b38;
-      --gris: #756d78;
-      --borde: #eadfea;
-      --sombra: 0 10px 30px rgba(92, 60, 110, 0.10);
+      --crema: #FCFAF7;
+      --lila: #B99BE8;
+      --lila-claro: #EDE5F8;
+      --rosa: #F4DDE8;
+      --verde: #DCE3D5;
+      --texto: #332D3A;
+      --blanco: #FFFFFF;
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     html {
@@ -42,545 +42,653 @@
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
-    /* ---------------- HEADER ---------------- */
+    button {
+      font-family: inherit;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       position: sticky;
       top: 0;
-      z-index: 1000;
-      background: rgba(255, 253, 251, 0.95);
+      z-index: 100;
+      background: rgba(252, 250, 247, 0.95);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--borde);
+      border-bottom: 1px solid #eee8f2;
     }
 
-    .navbar {
-      max-width: 1150px;
+    .nav {
+      max-width: 1200px;
       margin: auto;
-      padding: 18px 25px;
+      padding: 18px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 25px;
+      gap: 30px;
     }
 
     .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 27px;
-      font-weight: 700;
-      color: var(--lila-oscuro);
-      letter-spacing: -1px;
-    }
-
-    .logo span {
-      display: block;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 9px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      text-align: center;
-      color: var(--gris);
-      margin-top: -5px;
-    }
-
-    nav {
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      line-height: 0.9;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .logo-main {
+      font-size: 25px;
+      color: var(--lila);
+    }
+
+    .logo-sub {
+      font-size: 9px;
+      letter-spacing: 4px;
+      margin-top: 6px;
+      color: var(--texto);
+    }
+
+    .menu {
+      display: flex;
       gap: 28px;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 500;
     }
 
-    nav a {
-      transition: 0.2s;
+    .menu a {
+      transition: color 0.2s ease;
     }
 
-    nav a:hover {
-      color: var(--lila-oscuro);
+    .menu a:hover {
+      color: var(--lila);
     }
 
-    .cart-button {
-      border: none;
-      background: var(--lila-claro);
-      color: var(--lila-oscuro);
-      padding: 10px 15px;
-      border-radius: 50px;
+    .nav-icons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .icon-button {
+      border: 1px solid #e7deee;
+      background: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
       cursor: pointer;
-      font-weight: 700;
-      font-size: 14px;
+      font-size: 17px;
+      transition: 0.2s ease;
     }
 
-    /* ---------------- HERO ---------------- */
+    .icon-button:hover {
+      background: var(--lila-claro);
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
-      max-width: 1150px;
+      max-width: 1200px;
       margin: auto;
-      padding: 90px 25px 80px;
+      padding: 70px 30px 80px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 0.9fr 1.1fr;
       align-items: center;
-      gap: 70px;
+      gap: 65px;
     }
 
     .eyebrow {
-      color: var(--lila-oscuro);
-      font-size: 13px;
-      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 15px;
+      letter-spacing: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--lila);
+      margin-bottom: 18px;
     }
 
-    .hero h1 {
+    h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(45px, 6vw, 75px);
-      line-height: 1;
-      letter-spacing: -2px;
+      font-size: clamp(42px, 5vw, 70px);
+      line-height: 1.08;
+      font-weight: 600;
       margin-bottom: 25px;
     }
 
-    .hero h1 em {
-      color: var(--lila);
-      font-style: normal;
-    }
-
-    .hero p {
-      max-width: 500px;
-      color: var(--gris);
+    .hero-text {
+      max-width: 480px;
+      color: #665f6d;
       font-size: 17px;
-      margin-bottom: 30px;
+      margin-bottom: 32px;
     }
 
-    .buttons {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 13px 23px;
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 14px;
-      transition: 0.25s;
-    }
-
-    .button-primary {
-      background: var(--lila-oscuro);
+    .primary-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--lila);
       color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 14px 25px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.25s ease;
+      box-shadow: 0 8px 20px rgba(185, 155, 232, 0.25);
     }
 
-    .button-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--sombra);
+    .primary-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(185, 155, 232, 0.35);
     }
 
-    .button-secondary {
-      border: 1px solid var(--borde);
-      background: white;
-    }
-
-    .button-secondary:hover {
-      border-color: var(--lila);
-    }
-
-    .hero-card {
-      min-height: 450px;
+    .hero-image {
+      min-height: 470px;
       border-radius: 35px;
       background:
-        radial-gradient(circle at 20% 20%, #f5eafa 0 12%, transparent 13%),
-        radial-gradient(circle at 80% 70%, #f8e4ec 0 15%, transparent 16%),
-        linear-gradient(135deg, #eee2f7, #fff4f7);
+        radial-gradient(circle at 25% 25%, #f4ddeb 0 8%, transparent 9%),
+        radial-gradient(circle at 80% 70%, #dce3d5 0 9%, transparent 10%),
+        linear-gradient(135deg, #eee5f8, #faf5f8);
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
       overflow: hidden;
-      box-shadow: var(--sombra);
     }
 
-    .hero-logo {
-      width: 210px;
-      height: 210px;
-      background: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 15px 40px rgba(90, 50, 110, 0.12);
+    .hero-card {
+      width: 70%;
+      background: rgba(255,255,255,0.9);
+      padding: 35px;
+      border-radius: 20px;
       text-align: center;
-      color: var(--lila-oscuro);
+      transform: rotate(-4deg);
+      box-shadow: 0 25px 50px rgba(51,45,58,0.12);
+    }
+
+    .hero-card .star {
+      color: var(--lila);
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .hero-card h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 40px;
-      font-weight: 700;
+      font-size: 30px;
+      margin-bottom: 8px;
     }
 
-    /* ---------------- SECCIONES ---------------- */
-
-    section {
-      padding: 85px 25px;
+    .hero-card p {
+      color: #77707d;
+      font-size: 13px;
     }
 
-    .section-container {
-      max-width: 1150px;
-      margin: auto;
+    /* =========================
+       CATEGORÍAS
+    ========================= */
+
+    .section {
+      padding: 85px 30px;
     }
 
     .section-heading {
       text-align: center;
-      margin-bottom: 45px;
+      max-width: 650px;
+      margin: 0 auto 45px;
     }
 
     .section-heading h2 {
       font-family: 'Playfair Display', serif;
       font-size: 42px;
-      margin-bottom: 10px;
-    }
-
-    .section-heading p {
-      color: var(--gris);
-    }
-
-    /* ---------------- CATEGORIAS ---------------- */
-
-    .categories {
-      background: #faf6fc;
-    }
-
-    .category-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 15px;
-    }
-
-    .category {
-      background: white;
-      border: 1px solid var(--borde);
-      border-radius: 22px;
-      padding: 25px 15px;
-      text-align: center;
-      transition: 0.25s;
-    }
-
-    .category:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--sombra);
-    }
-
-    .category-icon {
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
-
-    .category h3 {
-      font-size: 15px;
-    }
-
-    /* ---------------- PRODUCTOS ---------------- */
-
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .product {
-      background: white;
-      border: 1px solid var(--borde);
-      border-radius: 25px;
-      overflow: hidden;
-      transition: 0.25s;
-    }
-
-    .product:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--sombra);
-    }
-
-    .product-image {
-      height: 250px;
-      background: linear-gradient(135deg, #eee4f8, #f9e8ef);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 55px;
-    }
-
-    .product-info {
-      padding: 22px;
-    }
-
-    .product-info h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      margin-bottom: 6px;
-    }
-
-    .product-info p {
-      color: var(--gris);
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
-
-    .product-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .price {
-      font-weight: 700;
-      color: var(--lila-oscuro);
-    }
-
-    .add-button {
-      border: none;
-      background: var(--lila-claro);
-      color: var(--lila-oscuro);
-      padding: 9px 13px;
-      border-radius: 50px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    /* ---------------- SOBRE MUNA ---------------- */
-
-    .about {
-      background: #faf6fc;
-    }
-
-    .about-box {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-      background: white;
-      border: 1px solid var(--borde);
-      border-radius: 30px;
-      padding: 50px 35px;
-    }
-
-    .about-box h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 40px;
-      margin-bottom: 18px;
-    }
-
-    .about-box p {
-      color: var(--gris);
-      max-width: 650px;
-      margin: auto;
-    }
-
-    /* ---------------- CONTACTO ---------------- */
-
-    .contact {
-      text-align: center;
-    }
-
-    .contact-box {
-      background: linear-gradient(135deg, #eee2f7, #f9e7ee);
-      border-radius: 30px;
-      padding: 55px 25px;
-    }
-
-    .contact-box h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 40px;
       margin-bottom: 12px;
     }
 
-    .contact-box p {
-      color: var(--gris);
-      margin-bottom: 25px;
+    .section-heading p {
+      color: #746d79;
     }
 
-    /* ---------------- FOOTER ---------------- */
-
-    footer {
-      background: #302638;
-      color: white;
-      text-align: center;
-      padding: 35px 20px;
+    .categories {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
     }
 
-    footer .footer-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      margin-bottom: 8px;
-    }
-
-    footer p {
-      opacity: 0.7;
-      font-size: 13px;
-    }
-
-    /* ---------------- CARRITO ---------------- */
-
-    .cart-panel {
-      position: fixed;
-      right: -420px;
-      top: 0;
-      width: min(390px, 90%);
-      height: 100vh;
-      background: white;
-      z-index: 2000;
-      box-shadow: -10px 0 40px rgba(0,0,0,0.15);
-      transition: 0.3s;
+    .category {
+      min-height: 220px;
+      border-radius: 24px;
       padding: 25px;
       display: flex;
       flex-direction: column;
+      justify-content: flex-end;
+      transition: 0.25s ease;
+      cursor: pointer;
     }
 
-    .cart-panel.open {
-      right: 0;
+    .category:hover {
+      transform: translateY(-6px);
     }
 
-    .cart-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 20px;
-      border-bottom: 1px solid var(--borde);
-    }
-
-    .cart-header h2 {
-      font-family: 'Playfair Display', serif;
-    }
-
-    .close-cart {
-      border: none;
+    .category:nth-child(1) {
       background: var(--lila-claro);
-      width: 35px;
-      height: 35px;
+    }
+
+    .category:nth-child(2) {
+      background: var(--rosa);
+    }
+
+    .category:nth-child(3) {
+      background: var(--verde);
+    }
+
+    .category:nth-child(4) {
+      background: #eee8df;
+    }
+
+    .category-icon {
+      font-size: 42px;
+      margin-bottom: auto;
+    }
+
+    .category h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 25px;
+    }
+
+    .category p {
+      font-size: 13px;
+      color: #625c67;
+    }
+
+    /* =========================
+       PRODUCTOS
+    ========================= */
+
+    .products-section {
+      background: white;
+    }
+
+    .products {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .product {
+      position: relative;
+    }
+
+    .product-image {
+      height: 300px;
+      border-radius: 22px;
+      background: var(--lila-claro);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 65px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+
+    .product:nth-child(2) .product-image {
+      background: var(--rosa);
+    }
+
+    .product:nth-child(3) .product-image {
+      background: var(--verde);
+    }
+
+    .product:nth-child(4) .product-image {
+      background: #eee8df;
+    }
+
+    .heart {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      width: 38px;
+      height: 38px;
+      border: none;
+      background: white;
       border-radius: 50%;
       cursor: pointer;
-      font-size: 18px;
+      font-size: 17px;
     }
 
-    #cart-items {
-      flex: 1;
-      overflow-y: auto;
-      padding: 20px 0;
-    }
-
-    .cart-item {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 15px 0;
-      border-bottom: 1px solid var(--borde);
-    }
-
-    .cart-item small {
-      display: block;
-      color: var(--gris);
-    }
-
-    .remove {
-      border: none;
-      background: none;
-      color: #a05b72;
-      cursor: pointer;
-    }
-
-    .cart-total {
-      border-top: 1px solid var(--borde);
-      padding-top: 20px;
-      font-size: 19px;
+    .product-category {
+      color: #8c7a9f;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
       font-weight: 700;
+    }
+
+    .product h3 {
+      margin-top: 4px;
+      font-size: 16px;
+    }
+
+    .price {
+      margin-top: 5px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       PERSONALIZADOS
+    ========================= */
+
+    .custom {
+      max-width: 1200px;
+      margin: auto;
+      border-radius: 35px;
+      background: var(--lila-claro);
+      padding: 65px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .custom h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 43px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .custom p {
+      color: #665f6d;
+      margin-bottom: 25px;
+    }
+
+    .custom-art {
+      min-height: 270px;
+      border-radius: 25px;
+      background: white;
       display: flex;
-      justify-content: space-between;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+      transform: rotate(3deg);
+      box-shadow: 0 20px 45px rgba(51,45,58,0.08);
+    }
+
+    /* =========================
+       FOTOLIBROS
+    ========================= */
+
+    .photobooks {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .photo-art {
+      min-height: 390px;
+      border-radius: 30px;
+      background: linear-gradient(145deg, #f5dfe9, #eee5f8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 100px;
+    }
+
+    .photobooks h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 43px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .photobooks p {
+      color: #6d6672;
+      margin-bottom: 25px;
+    }
+
+    /* =========================
+       INSTAGRAM
+    ========================= */
+
+    .instagram {
+      background: #f7f2fa;
+      text-align: center;
+    }
+
+    .instagram-grid {
+      max-width: 1000px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .insta-card {
+      aspect-ratio: 1;
+      border-radius: 18px;
+      background: var(--lila-claro);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+    }
+
+    .insta-card:nth-child(2) {
+      background: var(--rosa);
+    }
+
+    .insta-card:nth-child(3) {
+      background: var(--verde);
+    }
+
+    .insta-card:nth-child(4) {
+      background: #eee8df;
+    }
+
+    /* =========================
+       NEWSLETTER
+    ========================= */
+
+    .newsletter {
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .newsletter h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .newsletter p {
+      color: #716a76;
+      margin-bottom: 25px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      max-width: 520px;
+      margin: auto;
+      gap: 10px;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 15px 18px;
+      border-radius: 30px;
+      border: 1px solid #ded6e4;
+      background: white;
+      font-family: inherit;
+      outline: none;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: var(--texto);
+      color: white;
+      padding: 60px 30px 25px;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    footer .logo-main {
+      color: white;
+    }
+
+    footer .logo-sub {
+      color: #ddd4e5;
+    }
+
+    footer p {
+      color: #c9c0cf;
+      font-size: 13px;
+      margin-top: 15px;
+      max-width: 300px;
+    }
+
+    footer h4 {
       margin-bottom: 15px;
     }
 
-    .empty-cart {
-      text-align: center;
-      color: var(--gris);
-      padding: 50px 10px;
+    footer li {
+      list-style: none;
+      color: #c9c0cf;
+      margin-bottom: 8px;
+      font-size: 13px;
     }
 
-    /* ---------------- MOBILE ---------------- */
+    .copyright {
+      max-width: 1200px;
+      margin: 50px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid #504957;
+      color: #aaa1af;
+      font-size: 12px;
+    }
+
+    /* =========================
+       CELULAR
+    ========================= */
 
     @media (max-width: 850px) {
 
-      nav {
+      .nav {
+        padding: 15px 18px;
+      }
+
+      .menu {
         display: none;
       }
 
       .hero {
         grid-template-columns: 1fr;
-        padding-top: 55px;
-        gap: 40px;
+        padding: 50px 20px 60px;
+        gap: 35px;
       }
 
-      .hero-card {
-        min-height: 330px;
+      .hero-image {
+        min-height: 340px;
       }
 
-      .category-grid {
+      .section {
+        padding: 65px 20px;
+      }
+
+      .section-heading h2 {
+        font-size: 34px;
+      }
+
+      .categories {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .products-grid {
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .product-image {
+        height: 220px;
+      }
+
+      .custom {
+        grid-template-columns: 1fr;
+        padding: 40px 25px;
+      }
+
+      .custom h2,
+      .photobooks h2 {
+        font-size: 35px;
+      }
+
+      .photobooks {
         grid-template-columns: 1fr;
       }
 
-      .section-heading h2,
-      .about-box h2,
-      .contact-box h2 {
-        font-size: 34px;
+      .photo-art {
+        min-height: 300px;
+      }
+
+      .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
       }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 480px) {
 
-      .navbar {
-        padding: 15px 18px;
+      h1 {
+        font-size: 43px;
       }
 
-      .logo {
-        font-size: 23px;
-      }
-
-      .hero {
-        padding-left: 18px;
-        padding-right: 18px;
-      }
-
-      section {
-        padding: 65px 18px;
-      }
-
-      .hero h1 {
-        font-size: 48px;
-      }
-
-      .hero p {
-        font-size: 15px;
-      }
-
-      .hero-card {
-        min-height: 280px;
-        border-radius: 25px;
-      }
-
-      .hero-logo {
-        width: 165px;
-        height: 165px;
-        font-size: 32px;
-      }
-
-      .category-grid {
-        gap: 10px;
+      .categories,
+      .products {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
       }
 
       .category {
-        padding: 20px 10px;
+        min-height: 180px;
+        padding: 18px;
+      }
+
+      .category h3 {
+        font-size: 20px;
+      }
+
+      .product-image {
+        height: 180px;
+        font-size: 50px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -591,421 +699,435 @@
   <!-- HEADER -->
 
   <header>
-    <div class="navbar">
+    <nav class="nav">
 
       <a href="#" class="logo">
-        Muna
-        <span>Creaciones</span>
+        <span class="logo-main">MUNA ✦</span>
+        <span class="logo-sub">CREACIONES</span>
       </a>
 
-      <nav>
+      <div class="menu">
         <a href="#inicio">Inicio</a>
-        <a href="#catalogo">Catálogo</a>
-        <a href="#muna">Sobre Muna</a>
+        <a href="#tienda">Tienda</a>
+        <a href="#colecciones">Colecciones</a>
+        <a href="#personalizados">Personalizados</a>
         <a href="#contacto">Contacto</a>
-      </nav>
+      </div>
 
-      <button class="cart-button" onclick="openCart()">
-        🛍️ Carrito (<span id="cart-count">0</span>)
-      </button>
+      <div class="nav-icons">
+        <button class="icon-button" aria-label="Favoritos">♡</button>
+        <button class="icon-button" aria-label="Carrito">🛒</button>
+      </div>
 
-    </div>
+    </nav>
   </header>
 
 
-  <!-- HERO -->
+  <main id="inicio">
 
-  <main>
+    <!-- HERO -->
 
-    <section class="hero" id="inicio">
+    <section class="hero">
 
       <div>
 
         <div class="eyebrow">
-          Papelería creativa & personalizados
+          ✦ Hecho para vos ✦
         </div>
 
         <h1>
-          Ideas que se convierten en
-          <em>momentos.</em>
+          Papelería que convierte momentos en recuerdos.
         </h1>
 
-        <p>
-          Bienvenidos a Muna Creaciones ✨
-          Diseñamos detalles únicos y personalizados
-          para regalar, celebrar y guardar recuerdos.
+        <p class="hero-text">
+          Diseños, detalles y productos personalizados creados
+          para acompañar tus momentos más especiales.
         </p>
 
-        <div class="buttons">
-          <a href="#catalogo" class="button button-primary">
-            Ver productos
-          </a>
-
-          <a href="#contacto" class="button button-secondary">
-            Personalizá tu idea
-          </a>
-        </div>
+        <a href="#tienda" class="primary-button">
+          Descubrir tienda
+        </a>
 
       </div>
 
 
-      <div class="hero-card">
+      <div class="hero-image">
 
-        <div class="hero-logo">
-          MUNA
-        </div>
+        <div class="hero-card">
 
-      </div>
+          <div class="star">✦</div>
 
-    </section>
-
-
-    <!-- CATEGORIAS -->
-
-    <section class="categories">
-
-      <div class="section-container">
-
-        <div class="section-heading">
-
-          <p class="eyebrow">Encontrá tu favorito</p>
-
-          <h2>Todo lo que hacemos</h2>
+          <h2>Muna Creaciones</h2>
 
           <p>
-            Productos creados para hacer especiales
-            esos pequeños momentos.
+            Papelería creativa & personalizados
           </p>
 
         </div>
 
-
-        <div class="category-grid">
-
-          <div class="category">
-            <div class="category-icon">🎀</div>
-            <h3>Cumpleaños</h3>
-          </div>
-
-          <div class="category">
-            <div class="category-icon">📸</div>
-            <h3>Fotolibros</h3>
-          </div>
-
-          <div class="category">
-            <div class="category-icon">✨</div>
-            <h3>Stickers</h3>
-          </div>
-
-          <div class="category">
-            <div class="category-icon">📒</div>
-            <h3>Papelería</h3>
-          </div>
-
-          <div class="category">
-            <div class="category-icon">🎁</div>
-            <h3>Personalizados</h3>
-          </div>
-
-        </div>
-
       </div>
 
     </section>
 
 
-    <!-- CATALOGO -->
+    <!-- CATEGORÍAS -->
 
-    <section id="catalogo">
+    <section class="section" id="colecciones">
 
-      <div class="section-container">
+      <div class="section-heading">
 
-        <div class="section-heading">
-
-          <p class="eyebrow">Catálogo</p>
-
-          <h2>Productos destacados</h2>
-
-          <p>
-            Algunos de nuestros productos favoritos 💜
-          </p>
-
+        <div class="eyebrow">
+          ✦ Explorá Muna ✦
         </div>
 
-
-        <div class="products-grid">
-
-
-          <!-- PRODUCTO 1 -->
-
-          <article class="product">
-
-            <div class="product-image">
-              📸
-            </div>
-
-            <div class="product-info">
-
-              <h3>Fotolibro personalizado</h3>
-
-              <p>
-                Un recuerdo especial para guardar
-                tus momentos favoritos.
-              </p>
-
-              <div class="product-bottom">
-
-                <span class="price">
-                  Consultar
-                </span>
-
-                <button
-                  class="add-button"
-                  onclick="addToCart('Fotolibro personalizado')">
-                  Agregar
-                </button>
-
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <!-- PRODUCTO 2 -->
-
-          <article class="product">
-
-            <div class="product-image">
-              ✨
-            </div>
-
-            <div class="product-info">
-
-              <h3>Stickers personalizados</h3>
-
-              <p>
-                Diseños únicos para decorar
-                tus productos y regalos.
-              </p>
-
-              <div class="product-bottom">
-
-                <span class="price">
-                  Consultar
-                </span>
-
-                <button
-                  class="add-button"
-                  onclick="addToCart('Stickers personalizados')">
-                  Agregar
-                </button>
-
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <!-- PRODUCTO 3 -->
-
-          <article class="product">
-
-            <div class="product-image">
-              🎀
-            </div>
-
-            <div class="product-info">
-
-              <h3>Papelería para cumpleaños</h3>
-
-              <p>
-                Diseños personalizados para
-                celebrar momentos inolvidables.
-              </p>
-
-              <div class="product-bottom">
-
-                <span class="price">
-                  Consultar
-                </span>
-
-                <button
-                  class="add-button"
-                  onclick="addToCart('Papelería para cumpleaños')">
-                  Agregar
-                </button>
-
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <!-- PRODUCTO 4 -->
-
-          <article class="product">
-
-            <div class="product-image">
-              🎁
-            </div>
-
-            <div class="product-info">
-
-              <h3>Regalos personalizados</h3>
-
-              <p>
-                Creamos detalles pensados
-                especialmente para vos.
-              </p>
-
-              <div class="product-bottom">
-
-                <span class="price">
-                  Consultar
-                </span>
-
-                <button
-                  class="add-button"
-                  onclick="addToCart('Regalos personalizados')">
-                  Agregar
-                </button>
-
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <!-- PRODUCTO 5 -->
-
-          <article class="product">
-
-            <div class="product-image">
-              📒
-            </div>
-
-            <div class="product-info">
-
-              <h3>Cuadernos personalizados</h3>
-
-              <p>
-                Diseñados para que cada detalle
-                tenga tu estilo.
-              </p>
-
-              <div class="product-bottom">
-
-                <span class="price">
-                  Consultar
-                </span>
-
-                <button
-                  class="add-button"
-                  onclick="addToCart('Cuadernos personalizados')">
-                  Agregar
-                </button>
-
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <!-- PRODUCTO 6 -->
-
-          <article class="product">
-
-            <div class="product-image">
-              💜
-            </div>
-
-            <div class="product-info">
-
-              <h3>Diseños personalizados</h3>
-
-              <p>
-                ¿Tenés una idea?
-                La hacemos realidad.
-              </p>
-
-              <div class="product-bottom">
-
-                <span class="price">
-                  Consultar
-                </span>
-
-                <button
-                  class="add-button"
-                  onclick="addToCart('Diseño personalizado')">
-                  Agregar
-                </button>
-
-              </div>
-
-            </div>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- SOBRE MUNA -->
-
-    <section class="about" id="muna">
-
-      <div class="about-box">
-
-        <p class="eyebrow">Conocé Muna</p>
-
-        <h2>Creado con mucho amor 💜</h2>
+        <h2>
+          Encontrá algo especial
+        </h2>
 
         <p>
-          Muna Creaciones nace de la pasión por crear,
-          diseñar y transformar ideas en detalles especiales.
-          Cada producto es pensado y realizado con dedicación
-          para que tenga ese toque único que estabas buscando.
+          Pequeños detalles creados para hacer
+          especiales tus momentos.
         </p>
 
       </div>
 
+
+      <div class="categories">
+
+        <a href="#tienda" class="category">
+
+          <div class="category-icon">
+            📒
+          </div>
+
+          <h3>Papelería</h3>
+
+          <p>
+            Para organizar tus ideas.
+          </p>
+
+        </a>
+
+
+        <a href="#tienda" class="category">
+
+          <div class="category-icon">
+            🎀
+          </div>
+
+          <h3>Stickers</h3>
+
+          <p>
+            Pequeños detalles que hacen la diferencia.
+          </p>
+
+        </a>
+
+
+        <a href="#tienda" class="category">
+
+          <div class="category-icon">
+            📸
+          </div>
+
+          <h3>Fotolibros</h3>
+
+          <p>
+            Tus recuerdos, para siempre.
+          </p>
+
+        </a>
+
+
+        <a href="#personalizados" class="category">
+
+          <div class="category-icon">
+            🎁
+          </div>
+
+          <h3>Personalizados</h3>
+
+          <p>
+            Creado especialmente para vos.
+          </p>
+
+        </a>
+
+      </div>
+
     </section>
 
 
-    <!-- CONTACTO -->
+    <!-- PRODUCTOS -->
 
-    <section class="contact" id="contacto">
+    <section class="section products-section" id="tienda">
 
-      <div class="section-container">
+      <div class="section-heading">
 
-        <div class="contact-box">
+        <div class="eyebrow">
+          ✦ Favoritos de Muna ✦
+        </div>
 
-          <p class="eyebrow">
-            ¿Tenés una idea?
-          </p>
+        <h2>
+          Nuestros productos
+        </h2>
 
-          <h2>Hablemos 💌</h2>
+        <p>
+          Algunos de nuestros favoritos.
+        </p>
+
+      </div>
+
+
+      <div class="products">
+
+        <article class="product">
+
+          <button class="heart" aria-label="Agregar a favoritos">
+            ♡
+          </button>
+
+          <div class="product-image">
+            📓
+          </div>
+
+          <div class="product-category">
+            Papelería
+          </div>
+
+          <h3>
+            Cuaderno personalizado
+          </h3>
+
+          <div class="price">
+            $00.000
+          </div>
+
+        </article>
+
+
+        <article class="product">
+
+          <button class="heart" aria-label="Agregar a favoritos">
+            ♡
+          </button>
+
+          <div class="product-image">
+            🎀
+          </div>
+
+          <div class="product-category">
+            Stickers
+          </div>
+
+          <h3>
+            Pack de stickers
+          </h3>
+
+          <div class="price">
+            $00.000
+          </div>
+
+        </article>
+
+
+        <article class="product">
+
+          <button class="heart" aria-label="Agregar a favoritos">
+            ♡
+          </button>
+
+          <div class="product-image">
+            📖
+          </div>
+
+          <div class="product-category">
+            Fotolibros
+          </div>
+
+          <h3>
+            Fotolibro personalizado
+          </h3>
+
+          <div class="price">
+            $00.000
+          </div>
+
+        </article>
+
+
+        <article class="product">
+
+          <button class="heart" aria-label="Agregar a favoritos">
+            ♡
+          </button>
+
+          <div class="product-image">
+            🎁
+          </div>
+
+          <div class="product-category">
+            Regalos
+          </div>
+
+          <h3>
+            Regalo personalizado
+          </h3>
+
+          <div class="price">
+            $00.000
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- PERSONALIZADOS -->
+
+    <section class="section" id="personalizados">
+
+      <div class="custom">
+
+        <div>
+
+          <div class="eyebrow">
+            ✦ Hecho especialmente para vos ✦
+          </div>
+
+          <h2>
+            ¿Lo imaginaste?
+            Lo hacemos realidad.
+          </h2>
 
           <p>
-            Contanos qué estás buscando y
-            creemos algo especial juntas.
+            Contanos qué tenés en mente y creamos
+            un producto personalizado pensado
+            especialmente para vos.
           </p>
 
-          <a
-            href="#"
-            class="button button-primary">
-            Contactar a Muna
+          <a href="#contacto" class="primary-button">
+            Quiero personalizarlo
           </a>
 
         </div>
+
+
+        <div class="custom-art">
+          ✦ 🎀 ✦
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOTOLIBROS -->
+
+    <section class="section">
+
+      <div class="photobooks">
+
+        <div class="photo-art">
+          📸
+        </div>
+
+
+        <div>
+
+          <div class="eyebrow">
+            ✦ Fotolibros Muna ✦
+          </div>
+
+          <h2>
+            Tus recuerdos merecen
+            un lugar especial.
+          </h2>
+
+          <p>
+            Convertí tus momentos favoritos en
+            un recuerdo que puedas tocar,
+            guardar y volver a disfrutar.
+          </p>
+
+          <a href="#contacto" class="primary-button">
+            Crear mi fotolibro
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- INSTAGRAM -->
+
+    <section class="section instagram">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          ✦ Muna en Instagram ✦
+        </div>
+
+        <h2>
+          Seguinos en @muna.creaciones_
+        </h2>
+
+        <p>
+          Inspiración, novedades y nuevos productos.
+        </p>
+
+      </div>
+
+
+      <div class="instagram-grid">
+
+        <div class="insta-card">🌸</div>
+        <div class="insta-card">📒</div>
+        <div class="insta-card">🎀</div>
+        <div class="insta-card">✨</div>
+
+      </div>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+
+    <section class="section">
+
+      <div class="newsletter">
+
+        <div class="eyebrow">
+          ✦ Sé parte de Muna ✦
+        </div>
+
+        <h2>
+          No te pierdas las novedades
+        </h2>
+
+        <p>
+          Nuevos productos, colecciones y
+          promociones directamente en tu correo.
+        </p>
+
+        <form class="newsletter-form">
+
+          <input
+            type="email"
+            placeholder="Tu correo electrónico"
+            aria-label="Tu correo electrónico"
+          >
+
+          <button class="primary-button" type="submit">
+            Suscribirme
+          </button>
+
+        </form>
 
       </div>
 
@@ -1016,213 +1138,89 @@
 
   <!-- FOOTER -->
 
-  <footer>
+  <footer id="contacto">
 
-    <div class="footer-logo">
-      Muna Creaciones
-    </div>
+    <div class="footer-grid">
 
-    <p>
-      Papelería creativa & personalizados
-    </p>
+      <div>
 
-    <p>
-      © 2026 Muna Creaciones · Hecho con amor ✨
-    </p>
+        <div class="logo">
+          <span class="logo-main">MUNA ✦</span>
+          <span class="logo-sub">CREACIONES</span>
+        </div>
 
-  </footer>
+        <p>
+          Papelería creativa & personalizados
+          hechos con amor.
+        </p>
 
-
-  <!-- CARRITO -->
-
-  <aside class="cart-panel" id="cart-panel">
-
-    <div class="cart-header">
-
-      <h2>Tu carrito 🛍️</h2>
-
-      <button
-        class="close-cart"
-        onclick="closeCart()">
-        ×
-      </button>
-
-    </div>
+      </div>
 
 
-    <div id="cart-items">
+      <div>
 
-      <div class="empty-cart">
-        Todavía no agregaste productos 💜
+        <h4>Tienda</h4>
+
+        <ul>
+          <li><a href="#tienda">Papelería</a></li>
+          <li><a href="#tienda">Stickers</a></li>
+          <li><a href="#tienda">Fotolibros</a></li>
+          <li><a href="#personalizados">Personalizados</a></li>
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <h4>Ayuda</h4>
+
+        <ul>
+          <li>Preguntas frecuentes</li>
+          <li>Medios de pago</li>
+          <li>Envíos</li>
+          <li>Contacto</li>
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <h4>Seguinos</h4>
+
+        <ul>
+          <li>
+            <a
+              href="https://www.instagram.com/muna.creaciones_/"
+              target="_blank"
+            >
+              Instagram
+            </a>
+          </li>
+
+          <li>TikTok</li>
+          <li>WhatsApp</li>
+        </ul>
+
       </div>
 
     </div>
 
 
-    <div class="cart-total">
-
-      <span>Total</span>
-
-      <span id="cart-total">
-        Consultar
-      </span>
-
+    <div class="copyright">
+      © 2026 Muna Creaciones · Todos los derechos reservados.
     </div>
 
+  </footer>
 
-    <button
-      class="button button-primary"
-      style="border:none; cursor:pointer;"
-      onclick="sendOrder()">
-
-      Consultar pedido
-
-    </button>
-
-  </aside>
-
-
-  <!-- JAVASCRIPT -->
 
   <script>
 
-    let cart = [];
-
-
-    function addToCart(product) {
-
-      cart.push(product);
-
-      updateCart();
-
-      openCart();
-
-    }
-
-
-    function updateCart() {
-
-      const count =
-        document.getElementById("cart-count");
-
-      count.textContent = cart.length;
-
-
-      const items =
-        document.getElementById("cart-items");
-
-
-      if (cart.length === 0) {
-
-        items.innerHTML = `
-          <div class="empty-cart">
-            Todavía no agregaste productos 💜
-          </div>
-        `;
-
-        return;
-      }
-
-
-      items.innerHTML = "";
-
-
-      cart.forEach((product, index) => {
-
-        const item =
-          document.createElement("div");
-
-        item.className = "cart-item";
-
-        item.innerHTML = `
-
-          <div>
-            <strong>${product}</strong>
-            <small>Consultar precio</small>
-          </div>
-
-          <button
-            class="remove"
-            onclick="removeFromCart(${index})">
-
-            Eliminar
-
-          </button>
-
-        `;
-
-        items.appendChild(item);
-
-      });
-
-    }
-
-
-    function removeFromCart(index) {
-
-      cart.splice(index, 1);
-
-      updateCart();
-
-    }
-
-
-    function openCart() {
-
-      document
-        .getElementById("cart-panel")
-        .classList.add("open");
-
-    }
-
-
-    function closeCart() {
-
-      document
-        .getElementById("cart-panel")
-        .classList.remove("open");
-
-    }
-
-
-    function sendOrder() {
-
-      if (cart.length === 0) {
-
-        alert("Primero agregá algún producto al carrito 💜");
-
-        return;
-
-      }
-
-
-      let message =
-        "Hola Muna Creaciones 💜 Quiero consultar por:%0A%0A";
-
-
-      cart.forEach((product) => {
-
-        message +=
-          "• " + product + "%0A";
-
-      });
-
-
-      message +=
-        "%0A¡Gracias! ✨";
-
-
-      /*
-        MÁS ADELANTE VAMOS A PONER
-        ACÁ EL NÚMERO DE WHATSAPP DE MUNA.
-      */
-
-      alert(
-        "El carrito funciona correctamente ✨\n\n" +
-        "En el próximo paso conectaremos este botón con tu WhatsApp."
-      );
-
-    }
+    document.querySelector(".newsletter-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("¡Gracias por querer ser parte de Muna! ✦");
+    });
 
   </script>
 
