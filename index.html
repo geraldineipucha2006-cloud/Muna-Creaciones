@@ -1085,128 +1085,86 @@ Creamos detalles únicos y personalizados para regalar, celebrar momentos especi
 
   <script>
 
-    let cart = [];
+  let cart = [];
 
+function addToCart(product) {
+  cart.push(product);
+  updateCart();
+  openCart();
+}
 
-    function addToCart(product) {
+function updateCart() {
+  const count = document.getElementById("cart-count");
+  const items = document.getElementById("cart-items");
 
-      cart.push(product);
-
-      updateCart();
-
-      openCart();
-
-    }
-
-
-    function updateCart() {
-
-      const count =
-        document.getElementById("cart-count");
-
-      count.textContent = cart.length;
-
-
-      const items =
-        document.getElementById("cart-items");
-
-
-      if (cart.length === 0) {
-
-        items.innerHTML = `
-          <div class="empty-cart">
-            Todavía no agregaste productos 💜
-          </div>
-        `;
-
-        return;
-      }
-
-
-      items.innerHTML = "";
-
-
-      cart.forEach((product, index) => {
-
-        const item =
-          document.createElement("div");
-
-        item.className = "cart-item";
-
-        item.innerHTML = `
-
-          <div>
-            <strong>${product}</strong>
-            <small>Consultar precio</small>
-          </div>
-
-          <button
-            class="remove"
-            onclick="removeFromCart(${index})">
-
-            Eliminar
-
-          </button>
-
-        `;
-
-        items.appendChild(item);
-
-      });
-
-    }
-
-
-    function removeFromCart(index) {
-
-      cart.splice(index, 1);
-
-      updateCart();
-
-    }
-
-
-    function openCart() {
-
-      document
-        .getElementById("cart-panel")
-        .classList.add("open");
-
-    }
-
-
-    function closeCart() {
-
-      document
-        .getElementById("cart-panel")
-        .classList.remove("open");
-
-    }
-
-
-    function sendOrder() {
+  count.textContent = cart.length;
 
   if (cart.length === 0) {
-
-    alert("Primero agregá algún producto al carrito 💜");
-
+    items.innerHTML = `
+      <div class="empty-cart">
+        Todavía no agregaste productos 💜
+      </div>
+    `;
     return;
+  }
 
+  items.innerHTML = "";
+
+  cart.forEach((product, index) => {
+    const item = document.createElement("div");
+
+    item.className = "cart-item";
+
+    item.innerHTML = `
+      <div>
+        <strong>${product}</strong>
+        <small>Consultar precio</small>
+      </div>
+
+      <button
+        class="remove"
+        onclick="removeFromCart(${index})">
+        Eliminar
+      </button>
+    `;
+
+    items.appendChild(item);
+  });
+}
+
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  updateCart();
+}
+
+function openCart() {
+  document
+    .getElementById("cart-panel")
+    .classList.add("open");
+}
+
+function closeCart() {
+  document
+    .getElementById("cart-panel")
+    .classList.remove("open");
+}
+
+function sendOrder() {
+  if (cart.length === 0) {
+    alert("Primero agregá algún producto al carrito 💜");
+    return;
   }
 
   let message =
     "Hola Muna Creaciones 💜 Quiero hacer una consulta por estos productos:%0A%0A";
 
   cart.forEach((product, index) => {
-
     message +=
       (index + 1) + ". " + product + "%0A";
-
   });
 
   message +=
     "%0A¿Me pueden pasar el precio y la disponibilidad? ✨";
-
 
   const phoneNumber = "5491164734002";
 
@@ -1214,45 +1172,7 @@ Creamos detalles únicos y personalizados para regalar, celebrar momentos especi
     "https://wa.me/" + phoneNumber + "?text=" + message;
 
   window.open(whatsappURL, "_blank");
-
 }
-
-     }
-
-
-      let message =
-    Hola Muna Creaciones 💜
-Quiero hacer un pedido:
-
-• Fotolibro personalizado
-• Stickers personalizados
-• Papelería para cumpleaños  ;
-
-
-      cart.forEach((product) => {
-
-        message +=
-          "• " + product + "%0A";
-
-      });
-
-
-      message +=
-        "%0A¡Gracias! ✨";
-
-
-      /*
-        MÁS ADELANTE VAMOS A PONER
-        ACÁ EL NÚMERO DE WHATSAPP DE MUNA.
-      */
-
-      alert(
-        "El carrito funciona correctamente ✨\n\n" +
-        "En el próximo paso conectaremos este botón con tu WhatsApp."
-      );
-
-    }
-
   </script>
 
 </body>
