@@ -1185,15 +1185,40 @@
     }
 
 
-    function sendOrder() {
+    function sendOrder() {function sendOrder() {
 
-      if (cart.length === 0) {
+  if (cart.length === 0) {
 
-        alert("Primero agregá algún producto al carrito 💜");
+    alert("Primero agregá algún producto al carrito 💜");
 
-        return;
+    return;
 
-      }
+  }
+
+  let message =
+    "Hola Muna Creaciones 💜 Quiero hacer una consulta por estos productos:%0A%0A";
+
+  cart.forEach((product, index) => {
+
+    message +=
+      (index + 1) + ". " + product + "%0A";
+
+  });
+
+  message +=
+    "%0A¿Me pueden pasar el precio y la disponibilidad? ✨";
+
+
+  const phoneNumber = "5491164734002";
+
+  const whatsappURL =
+    "https://wa.me/" + phoneNumber + "?text=" + message;
+
+  window.open(whatsappURL, "_blank");
+
+}
+
+     }
 
 
       let message =
